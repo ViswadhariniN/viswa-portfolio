@@ -1,0 +1,193 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5E9D8;
+    font-family: Arial, sans-serif;
+    color: #142D50;
+}
+
+/* Header */
+header {
+    background-color: #9C7C5D;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    color: white;
+    font-family: Georgia, serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: #142D50;
+    border: 2px solid white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #9C7C5D;
+}
+
+/* Main Achievement Section */
+.achievement-page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto;
+    text-align: center;
+}
+
+.achievement-page h1 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #142D50;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* Achievement Grid */
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Achievement Cards */
+.achievement-card {
+    background-color: white;
+    padding: 30px 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+/* Achievement Icons */
+.achievement-icon {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+/* Achievement Titles */
+.achievement-card h3 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Achievement Description */
+.achievement-card p {
+    color: #765B43;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 25px;
+    background-color: #142D50;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #9C7C5D;
+}
+
+/* Tablet Responsive */
+@media (max-width: 850px) {
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 550px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .achievement-page h1 {
+        font-size: 30px;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .achievement-card {
+        padding: 25px 20px;
+    }
+}
+
+/* Scroll Reveal Animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Back to Top Button */
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: #142D50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #9C7C5D;
+}

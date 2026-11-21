@@ -1,0 +1,365 @@
+
+/* =================================
+   GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5E9D8;
+    color: #142D50;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background-color: #9C7C5D;
+}
+
+.header h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: bold;
+
+    background: linear-gradient(
+        90deg,
+        #fbfbfc,
+        #eccde5
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolio-btn {
+    text-decoration: none;
+    color: #142D50;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.portfolio-btn:hover {
+    background-color: white;
+    color: #9C7C5D;
+}
+
+
+/* =================================
+   ABOUT PAGE HEADING
+================================= */
+
+.about-page {
+    padding: 30px 6%;
+}
+
+.about-page > h1 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about-tagline {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+
+/* =================================
+   PROFILE SECTION
+================================= */
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+}
+
+/* PROFILE PHOTO */
+
+.profile-photo {
+    flex: 0 0 350px;
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 320px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center 35%;
+    border: 6px solid white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* PROFILE CONTENT */
+
+.profile-content {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    height: 400px;
+    overflow-y: auto;
+}
+
+.profile-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.profile-content::-webkit-scrollbar-thumb {
+    background-color: #142D50;
+    border-radius: 5px;
+}
+
+.profile-content::-webkit-scrollbar-track {
+    background-color: #F5E9D8;
+}
+
+.profile-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.profile-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+.PDs-section h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+/* =================================
+   Personal Details SECTION
+================================= */
+
+.PD-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.PD-card {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #174EA6;
+    color: white;
+    padding: 18px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.PD-card:hover {
+    background-color: #001F54;
+    transform: translateY(-5px);
+}
+.PD-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.PD-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.PD-card {
+    background-color: #9C7C5D;
+    color: white;
+    margin-top: 30px;
+    padding: 18px 35px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.PD-card:hover {
+    background-color: #174EA6;
+    transform: translateY(-5px);
+}
+
+
+/* =================================
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* HEADER */
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .header h2 {
+        font-size: 27px;
+    }
+
+
+    /* ABOUT HEADING */
+
+    .about-page {
+        padding: 20px 15px;
+    }
+
+    .about-page > h1 {
+        font-size: 28px;
+    }
+
+    .about-tagline {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+
+    /* PROFILE SECTION */
+
+    .profile-section {
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .profile-photo {
+        flex: none;
+        width: 100%;
+    }
+
+    .profile-photo img {
+        width: 250px;
+        height: 320px;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center 35%;
+    }
+
+    .profile-content {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .profile-content h2 {
+        font-size: 24px;
+    }
+
+    .profile-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+
+    
+
+    .PDs-section h2 {
+        font-size: 26px;
+    }
+
+    /* PDS */
+
+    .PDs-section {
+        margin: 40px auto;
+    }
+
+    .PD-list {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .PD-card {
+        width: 100%;
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE SCREENS
+================================= */
+
+@media screen and (max-width: 380px) {
+
+    .header h2 {
+        font-size: 23px;
+    }
+
+    .about-page > h1 {
+        font-size: 25px;
+    }
+
+    .profile-photo img {
+        width: 220px;
+        height: 290px;
+    }
+
+}
+
+/* Scroll Reveal Animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Back to Top Button */
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: #142D50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #9C7C5D;
+}

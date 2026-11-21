@@ -1,0 +1,286 @@
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5E9D8;
+    color: #142D50;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* Header */
+.header {
+    background-color: #9C7C5D;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #142D50;
+    border: 2px solid white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    background-color: white;
+    color: #9C7C5D;
+}
+
+/* Main Container */
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+/* Project Heading */
+.project-number {
+    color: #174EA6;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.container h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.project-intro {
+    font-size: 17px;
+    max-width: 850px;
+    margin-bottom: 40px;
+}
+
+/* Sections */
+.project-section,
+.project-gallery {
+    margin: 45px 0;
+}
+
+.project-section h2,
+.project-gallery h2 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: #142D50;
+}
+
+.project-section p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Project Gallery */
+.main-project-image {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background-color: white;
+    padding: 8px;
+    border-radius: 12px;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Working Principle */
+.working-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #174EA6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h3 {
+    color: #174EA6;
+    margin-bottom: 10px;
+}
+
+/* Features */
+.feature-list {
+    background-color: white;
+    padding: 25px 25px 25px 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+}
+
+/* Technologies and Applications */
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.technology-list span {
+    background-color: #174EA6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Back Button */
+.back-button {
+    margin: 50px 0;
+}
+
+.back-button a {
+    display: inline-block;
+    background-color: #142D50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-button a:hover {
+    background-color: #174EA6;
+}
+
+/* Footer */
+footer {
+    background-color: #9C7C5D;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .container h1 {
+        font-size: 29px;
+    }
+
+    .working-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-project-image {
+        height: 280px;
+    }
+
+    .header {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .header {
+        flex-direction: column;
+    }
+
+    .container h1 {
+        font-size: 25px;
+    }
+}
+
+/* Scroll Reveal Animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Back to Top Button */
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: #142D50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #9C7C5D;
+}
